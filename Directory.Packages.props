@@ -1,0 +1,23 @@
+<Project>
+
+  <!--
+    Central Package Management. Versions live here so an update only touches one place.
+    This stack moves fast - re-verify against NuGet before relying on these.
+  -->
+
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- The provider-agnostic building blocks: IChatClient and friends. -->
+    <PackageVersion Include="Microsoft.Extensions.AI" Version="10.7.0" />
+
+    <!-- IChatClient over the OpenAI SDK and OpenAI-compatible endpoints (GitHub Models, OpenAI, Azure OpenAI). -->
+    <PackageVersion Include="Microsoft.Extensions.AI.OpenAI" Version="10.7.0" />
+
+    <!-- IChatClient over a local Ollama server. Replaces the deprecated Microsoft.Extensions.AI.Ollama package. -->
+    <PackageVersion Include="OllamaSharp" Version="5.4.25" />
+  </ItemGroup>
+
+</Project>
